@@ -1,92 +1,68 @@
-## TODO project info 
-## Variables information
+# Project info 
+**TODO**
+
+## Variables Descriptions
+
+ * **Sex:** male or female(Nominal)
+* **Age:** Age of the patient;(Continuous - Although the recorded ages have been truncated to whole numbers, the concept of age is continuous)
+Behavioral
+* **Current Smoker:** whether or not the patient is a current smoker (Nominal)
+* **Cigs Per Day:** the number of cigarettes that the person smoked on average in one day.(can be considered continuous as one can have any number of cigarettes, even half a cigarette.)
+Medical( history)
+* **BP Meds:** whether or not the patient was on blood pressure medication (Nominal)
+* **Prevalent Stroke:** whether or not the patient had previously had a stroke (Nominal)
+* **Prevalent Hyp:** whether or not the patient was hypertensive (Nominal)
+* **Diabetes:** whether or not the patient had diabetes (Nominal)
+Medical(current)
+* **Tot Chol:** total cholesterol level (Continuous)
+* **Sys BP:** systolic blood pressure (Continuous)
+* **Dia BP:** diastolic blood pressure (Continuous)
+* **BMI:** Body Mass Index (Continuous)
+* **Heart Rate:** heart rate (Continuous - In medical research, variables such as heart rate though in fact discrete, yet are considered continuous because of large number of possible values.)
+* **Glucose:** glucose level (Continuous)
+* **Target Variable:** 10 year risk of coronary heart disease CHD (binary: “1”, means “Yes”, “0” means “No”)
+
+
+**Data and variable source**:  [Kaggle](https://www.kaggle.com/dileep070/heart-disease-prediction-using-logistic-regression)
+
 
 
 # File Descriptions
 
-* `notebook.ipynb` blabla
-* `predict.py` blabla
-* `predict_test.py` blabla
-* `train.py` blabla
-* 
-
-git clone 
-
-cd ML*
+* `notebook.ipynb`  Notebook contains data  preparation, EDA and model selection.
+* `train.py` Python file contains best model and saving model file. 
+* `predict.py` Python file contains model file and serving as Flask app.
+* `predict_test.py` Python file contains one observation for probility and CHD risk result. **(local solution)**
+* `cloud_predict.py ` Python file contains model for one observation and includes cloud endpoint. **(cloud solution)**
+* `requirements.txt` Txt file contains all dependencies  for notebook.ipynb and predictions scripts. 
 
 
+# Preparing Docker Images
+
+
+
+_This will also be italic_
+
+```bash
 git clone https://github.com/yusyel/ML-bookcamp-midterm.git
+```
 
+
+```bash
 cd ML-bookcamp-midterm
+```
+
+> In your python shell
+```bash
 pip install -r requirements.txt
-docker build -t midterm:v1 .
+```
 
+> For building docker images:
+```bash
+docker built -t midterm .
+```
+> After building docker images you can run docker images with this command:
 
-
-# Running Docker Images
-
-
-
-The idea is that you now apply everything we learned so far yourself.
-
-That will include:
-
-* Thinking of a problem that's interesting for you and finding a dataset for that
-* Describing this problem and explaining how a model could be used
-* Preparing the data and doing EDA, analyzing important features
-* Training multiple models, tuning their performance and selecting the best model
-* Exporting the notebook into a script
-* Putting your model into a web service and deploying it locally with docker
-* Bonus points for deploying the service to the cloud
-
-
-### Datasets
-
-* https://www.kaggle.com/datasets and https://www.kaggle.com/competitions
-* https://archive.ics.uci.edu/ml/index.php
-* https://data.europa.eu/en
-* https://www.openml.org/search?type=data
-* Add more data here!
-
-### Deliverables
-
-For this project, you repository/folder should contain the following:
-
-* `README.md` with
-  * Description of the problem
-  * Instructions on how to run the project
-* Notebook (suggested name - `notebook.ipynb`) with
-  * Data preparation and data clearning
-  * EDA, feature importance analysis
-  * Model selection process and parameter tuning
-* Script `train.py` (suggested name)
-  * Training the final model
-  * Saving it to a file (e.g. pickle)
-* Script `predict.py` (suggested name)
-  * Loading the model
-  * Serving it via a web serice (e.g. with Flask)
-* `Pipenv` and `Pipenv.lock`
-  * or equivalents: conda environment file, requirements.txt or pyproject.toml
-* `Dockerfile` for running the service
-
-
-## Submit the results
-
-Submit your results here: https://forms.gle/5JLFUwwXaUDssVKt7
-
-
-## Deadline
-
-The deadline for submitting is 1 November 2021, 17:00 CET (Monday). After that, the form will be closed.
-
-## FAQ
-
-**Q**: Can I use poetry / virtual env for managing dependencies; catboost for boosting and FastAPI for creating a web service?
-
-> Yes, you can use any library you want. But please make sure to document everything and clearly explain what you use.
-> Think of your peers who will review it - they don't necessarily know what these libraries are. 
-> Please give them enough context to understand your project.
-
-**Q**: Can multiple people use the same dataset?
-
-> Yes, there's no way to control it or enforce. So it's totally okay if you and somebody else use the same dataset. 
+```bash
+docker run -it --rm -p 9696:9696 midterm
+```

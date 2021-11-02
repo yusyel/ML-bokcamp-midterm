@@ -7,20 +7,20 @@ url= 'https://mlbookcamp-midterm.azurewebsites.net/predict'
 # %%
 
 patient =  {"male": "0",
-     "age": 54,
+     "age": 94,
      "education": "1.0",
-     "currentsmoker": "0",
-     "cigsperday": 0.0,
+     "currentsmoker": "1",
+     "cigsperday": 40.0,
      "bpmeds": "0.0",
      "prevalentstroke": "1",
      "prevalenthyp": "1",
-     "diabetes": "0",
-     "totchol": 315.0,
-     "sysbp": 176.0,
-     "diabp": 87.0,
-     "bmi": 29.23,
-     "heartrate": 82.0,
-     "glucose": 72.0}
+     "diabetes": "1",
+     "totchol": 415.0,
+     "sysbp": 276.0,
+     "diabp": 150.0,
+     "bmi": 109.23,
+     "heartrate": 100.0,
+     "glucose": 105.0}
 
 
 
