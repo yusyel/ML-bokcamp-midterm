@@ -1,4 +1,25 @@
-## 7. Midterm Project
+## TODO project info 
+## Variables information
+
+
+# File Descriptions
+
+* `notebook.ipynb` blabla
+* `predict.py` blabla
+* `predict_test.py` blabla
+* `train.py` blabla
+* 
+
+git clone 
+
+cd ML*
+
+
+
+
+# Running Docker Images
+
+
 
 The idea is that you now apply everything we learned so far yourself.
 
