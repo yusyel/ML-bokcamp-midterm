@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 > For building docker images:
 ```bash
-docker built -t midterm .
+docker build -t midterm .
 ```
 > After building docker images you can run docker images with this command:
 
