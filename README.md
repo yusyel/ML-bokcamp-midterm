@@ -37,7 +37,7 @@ Medical(current)
 * `requirements.txt` Txt file contains all dependencies  for notebook.ipynb and predictions scripts. 
 
 
-## Preparing Docker Images
+## Preparing And Running Docker Images
 
 
 
