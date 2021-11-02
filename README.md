@@ -1,4 +1,4 @@
-# Project info 
+## Project info 
 **TODO**
 
 ## Variables Descriptions
@@ -27,7 +27,7 @@ Medical(current)
 
 
 
-# File Descriptions
+## File Descriptions
 
 * `notebook.ipynb`  Notebook contains data  preparation, EDA and model selection.
 * `train.py` Python file contains best model and saving model file. 
@@ -37,7 +37,7 @@ Medical(current)
 * `requirements.txt` Txt file contains all dependencies  for notebook.ipynb and predictions scripts. 
 
 
-# Preparing Docker Images
+## Preparing Docker Images
 
 
 
