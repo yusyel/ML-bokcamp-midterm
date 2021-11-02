@@ -15,6 +15,12 @@ git clone
 cd ML*
 
 
+git clone https://github.com/yusyel/ML-bookcamp-midterm.git
+
+cd ML-bookcamp-midterm
+pip install -r requirements.txt
+docker build -t midterm:v1 .
+
 
 
 # Running Docker Images
