@@ -82,7 +82,7 @@ docker run -it --rm -p 9696:9696 midterm
 
 ## Runing Predictions File
 
-> In your python shell:
+> While docker container running In your python shell:
 
 ```bash
 python3 predict_test.py
