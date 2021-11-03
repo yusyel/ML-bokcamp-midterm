@@ -1,5 +1,11 @@
 ## Project info 
-**TODO**
+Data was originally used my biostatistics class and I want to try all classification algorithms and parameter tuning to see how much I can improve auc and accuracy score.
+
+Target variable is risk of in ten year CHD (<i>Coronary heart disease</i>). Coded as binary (0,1). Given all patient medical history calculating predictions risk of ten year may occur CHD.
+
+It's classification problem can be solve logistic regression, decision tree and random forest.
+
+
 
 ## Variables Descriptions
 
@@ -29,15 +35,15 @@ Medical(current)
 
 ## File Descriptions
 
-* `notebook.ipynb`  Notebook contains data  preparation, EDA and model selection.
-* `train.py` Python file contains best model and saving model file. 
+* `notebook.ipynb`  Notebook contains data  preparation, EDA, feature importance, parameter tuning and  model selection.
+* `train.py` Python file contains best model and saving model file. (<i>Exported script</i>)
 * `predict.py` Python file contains model file and serving as Flask app.
 * `predict_test.py` Python file contains one observation for probility and CHD risk result. **(local solution)**
 * `cloud_predict.py ` Python file contains model for one observation and includes cloud endpoint. **(cloud solution)**
 * `requirements.txt` Txt file contains all dependencies  for notebook.ipynb and predictions scripts. 
 
 
-## Preparing And Running Docker Images
+## Preparing Python Environments
 
 
 
@@ -52,10 +58,17 @@ git clone https://github.com/yusyel/ML-bookcamp-midterm.git
 cd ML-bookcamp-midterm
 ```
 
-> In your python shell
+> Activate python environments
+```bash
+pipenv shell
+```
+> In python environment installing python dependency:
+
 ```bash
 pip install -r requirements.txt
 ```
+## Preparing And Running Docker Images
+
 
 > For building docker images:
 ```bash
@@ -66,3 +79,20 @@ docker build -t midterm .
 ```bash
 docker run -it --rm -p 9696:9696 midterm
 ```
+
+## Runing Predictions File
+
+> In your python shell:
+
+```bash
+python3 predict_test.py
+```
+* Result will be randomly selected patient risk of ten year CHD result and probability.
+
+> Cloud test. `cloud_predict.py` contains server endpoint.
+
+```bash
+python3 cloud_predict.py
+```
+
+* Result will be randomly selected patient risk of ten year CHD result and probability.
