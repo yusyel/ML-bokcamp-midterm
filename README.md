@@ -67,14 +67,14 @@ pipenv shell
 ```bash
 pip install -r requirements.txt
 ```
-## Preparing And Running Docker Images
+## Preparing And Running Docker Image
 
 
-> For building docker images:
+> For building docker image:
 ```bash
 docker build -t midterm .
 ```
-> After building docker images you can run docker images with this command:
+> After building docker image you can run docker image with this command:
 
 ```bash
 docker run -it --rm -p 9696:9696 midterm
