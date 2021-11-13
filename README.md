@@ -47,7 +47,7 @@ Medical(current)
 
 
 
-_This will also be italic_
+
 
 ```bash
 git clone https://github.com/yusyel/ML-bookcamp-midterm.git
